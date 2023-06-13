@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D6F0E2; -fx-min-width: 809; -fx-min-height: 425;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewRegisterController">
+   <children>
+      <AnchorPane layoutY="-1.0" minWidth="809.0" prefHeight="116.0" prefWidth="809.0" style="-fx-background-color: #D9D9D9; -fx-min-width: 809; -fx-min-height: 93;">
+         <children>
+            <Button layoutX="466.0" layoutY="46.0" mnemonicParsing="false" style="-fx-background-color: #273F92; -fx-min-width: 137; -fx-min-height: 29;" text="CREAR CUENTA" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="639.0" layoutY="46.0" mnemonicParsing="false" style="-fx-background-color: #273F92; -fx-min-width: 137; -fx-min-height: 29;" text="INICIAR SESIÓN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/LOGO%20HOME.JPG" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="184.0" layoutY="228.0" prefHeight="66.0" prefWidth="569.0" style="-fx-font-size: 22;" text="Reta tus amigos con el juego de preguntas en tiempo real">
+         <font>
+            <Font name="Comic Sans MS Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="59.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/HOME%202.JPG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

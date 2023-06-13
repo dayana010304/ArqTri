@@ -6,37 +6,21 @@ package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
-
 
 /**
  * FXML Controller class
  *
- * @author dayan
+ * @author Dell
  */
-public class ViewRegisterController implements Initializable {
-    
-    
-        public void eventKey(KeyEvent event){
-        }
-        public void eventAction(ActionEvent event){
-            
-        }
+public class ViewNewGameController implements Initializable {
 
     /**
      * Initializes the controller class.
-     * @param url
-     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-}
     
-
+}
