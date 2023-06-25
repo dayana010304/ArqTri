@@ -6,37 +6,17 @@ package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.input.KeyEvent;
 
 /**
  * FXML Controller class
  *
- * @author dayan
+ * @author Dell
  */
-public class ViewPrincipalController implements Initializable {
-    
-    @FXML
-    private Button btnRegister;
-    
-    @FXML
-    private Button btnLogin;
-    
-    @FXML
-        public void eventKey(KeyEvent event){
-        }
-    @FXML
-        public void eventAction(ActionEvent event){
-            
-        }
+public class ViewGameOverWinController implements Initializable {
 
     /**
      * Initializes the controller class.
-     * @param url
-     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

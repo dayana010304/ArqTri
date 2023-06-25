@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="740.0" style="-fx-background-color: D6F0E2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewRegisterController">
+    <stylesheets>
+        <URL value="@/css/viewregister.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="191.0" layoutY="105.0" prefHeight="359.0" prefWidth="355.0" style="-fx-background-color: #ffff; -fx-border-radius: 10;;">
+         <children>
+          <Button fx:id="btnRegister" defaultButton="true" layoutX="178.0" layoutY="297.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="143.0" style="-fx-background-color: #273F92; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="VOLVER AL INICIO" textAlignment="CENTER" textFill="WHITE" />
+            <AnchorPane layoutX="-3.0" layoutY="-4.0" prefHeight="36.0" prefWidth="357.0" style="-fx-background-color: #000000; -fx-border-radius: 10;">
+               <children>
+                  <Label layoutX="121.0" layoutY="13.0" text="PARTIDA DE PRUEBA " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="29.0" layoutY="78.0" prefHeight="92.0" prefWidth="298.0" text="EXECELENTE HAS GANADO LA PARTIDA !!">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <ImageView fitHeight="130.0" fitWidth="143.0" layoutX="104.0" layoutY="144.0">
+               <image>
+                  <Image url="@../img/estrella.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="92.0" prefWidth="740.0" style="-fx-background-color: #D9D9D9; -fx-border-radius: 10;" />
+      <ImageView fitHeight="74.0" fitWidth="189.0">
+         <image>
+            <Image url="@../img/LOGO%20HOME.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="89.0" fitWidth="200.0">
+         <image>
+            <Image url="@../img/LOGO%20HOME.JPG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

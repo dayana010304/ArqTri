@@ -27,16 +27,16 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 import javax.swing.JOptionPane;
-import model.CreateUserDAO;
+import model.UserDAO;
 
 /**
  * FXML Controller class
  *
  * @author dayan
  */
-public class ViewRegisterController implements Initializable {
+public class ViewLoginController implements Initializable {
 
-    private CreateUserDAO model = new CreateUserDAO();
+    private UserDAO model = new UserDAO();
     
     @FXML
     private TextField txtEmail;
@@ -45,10 +45,7 @@ public class ViewRegisterController implements Initializable {
     private TextField txtPassword;
     
     @FXML
-    private TextField txtNameUser;
-    
-    @FXML
-    private Button btnRegister;
+    private Button btnLogin;
     
     @FXML
     private void eventKey(KeyEvent event){
@@ -65,15 +62,10 @@ public class ViewRegisterController implements Initializable {
 
             if(event.getCharacter().equals(" ")){
                 event.consume();
-            }
-            else if(evt.equals(txtNameUser)){
-
-            if(event.getCharacter().equals(" ")){
-                event.consume();
             }            
-        }
         
         }
+        
     }
     
     @FXML
@@ -81,15 +73,14 @@ public class ViewRegisterController implements Initializable {
         
         Object evt = event.getSource();
 
-        if(evt.equals(btnRegister)){
+        if(evt.equals(btnLogin)){
                                 
-            if(!txtEmail.getText().isEmpty() && !txtPassword.getText().isEmpty() && !txtNameUser.getText().isEmpty()){
+            if(!txtEmail.getText().isEmpty() && !txtPassword.getText().isEmpty()){
             
                 String user = txtEmail.getText();
                 String pass = txtPassword.getText();
-                String nameUser = txtNameUser.getText();
                 
-                int state = model.register(user, pass, nameUser);
+                int state = model.login(user, pass);
                 
                 if(state!=-1){
 
@@ -97,7 +88,7 @@ public class ViewRegisterController implements Initializable {
 
                         JOptionPane.showMessageDialog(null, "Datos correctos puede ingresar al sistema");
                         
-                        loadStage("/view/ViewPrincipal.fxml", event);
+                        loadStage("/view/ViewUserPage.fxml", event);
 
                     }else{
                         JOptionPane.showMessageDialog(null, "Error al iniciar sesión datos de acceso incorrectos", 
@@ -158,7 +149,6 @@ public class ViewRegisterController implements Initializable {
         }
                 
     }    
-
     
     
 }
