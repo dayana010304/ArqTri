@@ -6,7 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< HEAD
 <AnchorPane id="AnchorPane" prefHeight="484.0" prefWidth="760.0" style="-fx-background-color: D6F0E2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewUserPageController">
+=======
+<AnchorPane id="AnchorPane" prefHeight="484.0" prefWidth="760.0" style="-fx-background-color: D6F0E2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewRegisterController">
+    <stylesheets>
+        <URL value="@/css/viewregister.css" />
+    </stylesheets>
+>>>>>>> 784fac24a592d01b6076271bbec793076948bbca
    <children>
       <AnchorPane layoutY="-3.0">
          <children>
@@ -26,7 +33,11 @@
             </AnchorPane>
          </children>
       </AnchorPane>
+<<<<<<< HEAD
       <Button fx:id="Create" defaultButton="true" layoutX="171.0" layoutY="168.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="418.0" style="-fx-background-color: #47BA61; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="+ CREAR UNA PARTIDA" textAlignment="CENTER" textFill="WHITE">
+=======
+      <Button fx:id="btnRegister1" defaultButton="true" layoutX="171.0" layoutY="168.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="418.0" style="-fx-background-color: #47BA61; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="+ CREAR UNA PARTIDA" textAlignment="CENTER" textFill="WHITE">
+>>>>>>> 784fac24a592d01b6076271bbec793076948bbca
          <font>
             <Font size="22.0" />
          </font>

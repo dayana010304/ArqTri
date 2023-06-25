@@ -1,4 +1,5 @@
 /*
+<<<<<<< HEAD
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -28,10 +29,21 @@ import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 import javax.swing.JOptionPane;
 import model.UserDAO;
+=======
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
+ */
+package controller;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
+>>>>>>> 784fac24a592d01b6076271bbec793076948bbca
 
 /**
  * FXML Controller class
  *
+<<<<<<< HEAD
  * @author dayan
  */
 public class ViewLoginController implements Initializable {
@@ -109,6 +121,12 @@ public class ViewLoginController implements Initializable {
     
     
     
+=======
+ * @author Dell
+ */
+public class ViewLoginController implements Initializable {
+
+>>>>>>> 784fac24a592d01b6076271bbec793076948bbca
     /**
      * Initializes the controller class.
      */
@@ -117,6 +135,7 @@ public class ViewLoginController implements Initializable {
         // TODO
     }    
     
+<<<<<<< HEAD
     private void loadStage(String url, Event event){
             
         try {
@@ -152,3 +171,6 @@ public class ViewLoginController implements Initializable {
     
     
 }
+=======
+}
+>>>>>>> 784fac24a592d01b6076271bbec793076948bbca

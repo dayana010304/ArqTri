@@ -38,6 +38,7 @@ public class ViewRegisterController implements Initializable {
 
     private CreateUserDAO model = new CreateUserDAO();
     
+<<<<<<< HEAD
     @FXML
     private TextField txtEmail;
     
@@ -56,6 +57,12 @@ public class ViewRegisterController implements Initializable {
         Object evt = event.getSource();
         
         if(evt.equals(txtEmail)){
+=======
+    
+        public void eventKey(KeyEvent event){
+        }
+        public void eventAction(ActionEvent event){
+>>>>>>> 784fac24a592d01b6076271bbec793076948bbca
             
             if(event.getCharacter().equals(" ")){
                 event.consume();
