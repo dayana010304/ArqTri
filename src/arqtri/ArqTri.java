@@ -4,34 +4,30 @@
  */
 package arqtri;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 /**
  *
  * @author dayan
  */
-public class ArqTri extends Application{
-
-    public static void main(String[] args) {
+public class ArqTri extends Application{    
+    
+    @Override
+    public void start (Stage stage) throws IOException {        
+        FXMLLoader fmxlLoader = new FXMLLoader (ArqTri.class.getResource("/view/ViewPrincipal.fxml"));
+        Scene scene = new Scene(fmxlLoader.load());
+        stage.setTitle("ArqTri");
+        stage.setScene(scene);
+        stage.show();
+                
+    }
+public static void main(String[] args) {
         // TODO code application logic here
         launch(args);
     }
-    
-    @Override
-    public void start (Stage stage) throws Exception {
-        
-        Parent root = FXMLLoader.load(getClass().getResource("/view/ViewPrincipal.fxml"));
-        Scene scene = new Scene(root);
-        stage.setTitle("INICIO");
-        stage.setScene(scene);
-        stage.show();
-        
-                
-    }
-
     
     
 }

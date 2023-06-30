@@ -1,5 +1,4 @@
 /*
-<<<<<<< HEAD
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -29,21 +28,10 @@ import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 import javax.swing.JOptionPane;
 import model.UserDAO;
-=======
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
-package controller;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
->>>>>>> 784fac24a592d01b6076271bbec793076948bbca
 
 /**
  * FXML Controller class
  *
-<<<<<<< HEAD
  * @author dayan
  */
 public class ViewLoginController implements Initializable {
@@ -74,12 +62,10 @@ public class ViewLoginController implements Initializable {
 
             if(event.getCharacter().equals(" ")){
                 event.consume();
-            }            
-        
+            }
         }
+    }                  
         
-    }
-    
     @FXML
     private void eventAction(ActionEvent event){
         
@@ -89,10 +75,10 @@ public class ViewLoginController implements Initializable {
                                 
             if(!txtEmail.getText().isEmpty() && !txtPassword.getText().isEmpty()){
             
-                String user = txtEmail.getText();
+                String email = txtEmail.getText();
                 String pass = txtPassword.getText();
                 
-                int state = model.login(user, pass);
+                int state = model.login(email, pass);
                 
                 if(state!=-1){
 
@@ -100,7 +86,7 @@ public class ViewLoginController implements Initializable {
 
                         JOptionPane.showMessageDialog(null, "Datos correctos puede ingresar al sistema");
                         
-                        loadStage("/view/ViewUserPage.fxml", event);
+                        loadStage("/view/ViewPrincipal.fxml", event);
 
                     }else{
                         JOptionPane.showMessageDialog(null, "Error al iniciar sesión datos de acceso incorrectos", 
@@ -121,21 +107,29 @@ public class ViewLoginController implements Initializable {
     
     
     
-=======
- * @author Dell
- */
-public class ViewLoginController implements Initializable {
-
->>>>>>> 784fac24a592d01b6076271bbec793076948bbca
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+      btnLogin.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+                    thisstage.close();
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewUserPage.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load());
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }    
     
-<<<<<<< HEAD
     private void loadStage(String url, Event event){
             
         try {
@@ -171,6 +165,3 @@ public class ViewLoginController implements Initializable {
     
     
 }
-=======
-}
->>>>>>> 784fac24a592d01b6076271bbec793076948bbca

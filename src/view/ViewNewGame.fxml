@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -9,39 +9,37 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="740.0" style="-fx-background-color: D6F0E2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewRegisterController">
-    <stylesheets>
-        <URL value="@/css/viewregister.css" />
-    </stylesheets>
+
+<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="740.0" style="-fx-background-color: D6F0E2;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="controller.ViewNewGameController">
    <children>
-      <AnchorPane layoutX="176.0" layoutY="128.0" prefHeight="295.0" prefWidth="388.0" style="-fx-background-color: #ffff; -fx-border-radius: 10;;">
+      <AnchorPane prefHeight="74.0" prefWidth="740.0" style="-fx-background-color: #D9D9D9;" />
+      <ImageView fitHeight="74.0" fitWidth="186.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/LOGO%20HOME.JPG" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="176.0" layoutY="128.0" prefHeight="295.0" prefWidth="388.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 10;">
          <children>
-            <TextField fx:id="txtEmail" layoutX="52.0" layoutY="105.0" opacity="0.5" prefHeight="28.0" prefWidth="247.0" style="-fx-min-width: 227; -fx-min-height: 28;" text="Numero de Preguntas" />
-            <TextField fx:id="txtPassword" layoutX="52.0" layoutY="65.0" opacity="0.5" prefHeight="28.0" prefWidth="247.0" style="-fx-min-width: 227; -fx-min-height: 28;" text="Titulo" />
-          <Button fx:id="btnRegister" defaultButton="true" layoutX="52.0" layoutY="230.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="122.0" style="-fx-background-color: #273F92; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="CREAR PARTIDA" textAlignment="CENTER" textFill="WHITE" />
-            <AnchorPane layoutY="-4.0" prefHeight="36.0" prefWidth="388.0" style="-fx-background-color: #000000; -fx-border-radius: 10;">
+            <AnchorPane prefHeight="36.0" prefWidth="388.0" style="-fx-background-color: #000000; -fx-border-radius: 10;">
                <children>
-                  <Label layoutX="131.0" layoutY="5.0" text="Crear Una Partida" textFill="WHITE">
+                  <Label layoutX="119.0" layoutY="4.0" text="Crear Una Partida" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <ChoiceBox layoutX="52.0" layoutY="177.0" prefHeight="26.0" prefWidth="247.0" />
-            <Label layoutX="52.0" layoutY="157.0" text="Seleccione las categorias">
+            <TextField fx:id="txtNumberQuestions" layoutX="52.0" layoutY="120.0" prefHeight="28.0" prefWidth="248.0" promptText="Numero De Preguntas" />
+            <TextField fx:id="txtTitle" layoutX="50.0" layoutY="75.0" prefHeight="26.0" prefWidth="248.0" promptText="Titulo" />
+            <Label layoutX="52.0" layoutY="157.0" prefHeight="28.0" prefWidth="247.0" text="Seleccione La Categoria">
                <font>
-                  <Font size="14.0" />
+                  <Font size="13.0" />
                </font>
             </Label>
-            <Button fx:id="btnRegister1" defaultButton="true" layoutX="205.0" layoutY="230.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" style="-fx-background-color: #5E5656; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="CANCELAR" textAlignment="CENTER" textFill="WHITE" />
+            <ComboBox fx:id="category" accessibleRole="CONTEXT_MENU" layoutX="52.0" layoutY="185.0" prefHeight="26.0" prefWidth="247.0" promptText="Categorias" />
+            <Button fx:id="btnNewGame" layoutX="52.0" layoutY="230.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="122.0" style="-fx-background-color: #273F92; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="CREAR PARTIDA" textFill="WHITE" />
+            <Button fx:id="btnCancel" layoutX="194.0" layoutY="230.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="122.0" style="-fx-background-color: #5E5656; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="CANCELAR" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="74.0" prefWidth="740.0" style="-fx-background-color: #D9D9D9; -fx-border-radius: 10;" />
-      <ImageView fitHeight="74.0" fitWidth="189.0">
-         <image>
-            <Image url="@../img/LOGO%20HOME.JPG" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

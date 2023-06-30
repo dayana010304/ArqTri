@@ -38,7 +38,6 @@ public class ViewRegisterController implements Initializable {
 
     private CreateUserDAO model = new CreateUserDAO();
     
-<<<<<<< HEAD
     @FXML
     private TextField txtEmail;
     
@@ -57,12 +56,6 @@ public class ViewRegisterController implements Initializable {
         Object evt = event.getSource();
         
         if(evt.equals(txtEmail)){
-=======
-    
-        public void eventKey(KeyEvent event){
-        }
-        public void eventAction(ActionEvent event){
->>>>>>> 784fac24a592d01b6076271bbec793076948bbca
             
             if(event.getCharacter().equals(" ")){
                 event.consume();
@@ -72,12 +65,13 @@ public class ViewRegisterController implements Initializable {
 
             if(event.getCharacter().equals(" ")){
                 event.consume();
-            }
-            else if(evt.equals(txtNameUser)){
+                
+            }else if(evt.equals(txtNameUser)){
 
             if(event.getCharacter().equals(" ")){
                 event.consume();
             }            
+        
         }
         
         }
@@ -92,11 +86,11 @@ public class ViewRegisterController implements Initializable {
                                 
             if(!txtEmail.getText().isEmpty() && !txtPassword.getText().isEmpty() && !txtNameUser.getText().isEmpty()){
             
-                String user = txtEmail.getText();
+                String email = txtEmail.getText();
                 String pass = txtPassword.getText();
-                String nameUser = txtNameUser.getText();
+                String userName = txtNameUser.getText();
                 
-                int state = model.register(user, pass, nameUser);
+                int state = model.register(email, pass, userName);
                 
                 if(state!=-1){
 
@@ -130,7 +124,22 @@ public class ViewRegisterController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        btnRegister.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+                    thisstage.close();
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewUserPage.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load());
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }    
     
     private void loadStage(String url, Event event){
@@ -165,7 +174,6 @@ public class ViewRegisterController implements Initializable {
         }
                 
     }    
-
     
     
 }

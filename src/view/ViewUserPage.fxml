@@ -6,41 +6,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<<<<<<< HEAD
-<AnchorPane id="AnchorPane" prefHeight="484.0" prefWidth="760.0" style="-fx-background-color: D6F0E2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewUserPageController">
-=======
-<AnchorPane id="AnchorPane" prefHeight="484.0" prefWidth="760.0" style="-fx-background-color: D6F0E2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewRegisterController">
-    <stylesheets>
-        <URL value="@/css/viewregister.css" />
-    </stylesheets>
->>>>>>> 784fac24a592d01b6076271bbec793076948bbca
+<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="740.0" style="-fx-background-color: D6F0E2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewUserPageController">
    <children>
-      <AnchorPane layoutY="-3.0">
+      <AnchorPane prefHeight="74.0" prefWidth="740.0" style="-fx-background-color: #D9D9D9;">
          <children>
-            <AnchorPane prefHeight="120.0" prefWidth="760.0" style="-fx-background-color: #D9D9D9; -fx-border-radius: 10;">
-               <children>
-                <Button fx:id="btnRegister" defaultButton="true" layoutX="560.0" layoutY="48.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="186.0" style="-fx-background-color: #273F92; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="Cerrar Sesión" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-                  <ImageView fitHeight="82.0" fitWidth="209.0" layoutX="23.0" layoutY="19.0">
-                     <image>
-                        <Image url="@../img/LOGO%20HOME.JPG" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
+            <Button fx:id="btnCloseSession" layoutX="541.0" layoutY="25.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="152.0" style="-fx-background-color: #273F92; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="CERRAR SESION" textFill="WHITE" />
+            <ImageView fitHeight="74.0" fitWidth="200.0" layoutX="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/LOGO%20HOME.JPG" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-<<<<<<< HEAD
-      <Button fx:id="Create" defaultButton="true" layoutX="171.0" layoutY="168.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="418.0" style="-fx-background-color: #47BA61; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="+ CREAR UNA PARTIDA" textAlignment="CENTER" textFill="WHITE">
-=======
-      <Button fx:id="btnRegister1" defaultButton="true" layoutX="171.0" layoutY="168.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="418.0" style="-fx-background-color: #47BA61; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="+ CREAR UNA PARTIDA" textAlignment="CENTER" textFill="WHITE">
->>>>>>> 784fac24a592d01b6076271bbec793076948bbca
+      <Button fx:id="btnnewGame" layoutX="134.0" layoutY="150.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="472.0" style="-fx-background-color: #47BA61; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="+ CREAR UNA PARTIDA" textFill="WHITE">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Button>
+      <ImageView fitHeight="198.0" fitWidth="205.0" layoutX="261.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/start-up.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

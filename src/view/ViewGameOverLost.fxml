@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="740.0" style="-fx-background-color: D6F0E2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewRegisterController">
+<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="740.0" style="-fx-background-color: D6F0E2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewGameOverLostController">
     <stylesheets>
         <URL value="@/css/viewregister.css" />
     </stylesheets>
