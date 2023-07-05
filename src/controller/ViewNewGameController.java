@@ -9,14 +9,12 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -27,65 +25,125 @@ import javafx.stage.Stage;
  */
 public class ViewNewGameController implements Initializable {
 
-  @FXML
-  private ComboBox category;
-  
-  @FXML
-  private TextField txtTitle ;
-  
     @FXML
-  private TextField txtNumberQuestions ;
-    
+    private ComboBox<String> category;
+
+    @FXML
+    private TextField txtTitle;
+
     @FXML
     private Button btnNewGame;
-        @FXML
-    private Button btnCancel;
-    
+
     @FXML
-    void Selected(ActionEvent event){
-        
-        String s = category.getSelectionModel().getSelectedItem().toString();
-        
-    }
-  
+    private Button btnCancel;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        ObservableList<String> list = FXCollections.observableArrayList("Musica","Historia", "Deportes","Geografia");
+        ObservableList<String> list = FXCollections.observableArrayList("Musica", "Cultura", "Deportes", "Geografia");
         category.setItems(list);
-        
-        
-           btnNewGame.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-                    thisstage.close();
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewQuestions.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load());
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
+
+        btnNewGame.setOnAction(event -> handleNewGameButton(event));
+
+        btnCancel.setOnAction(event -> handleCancelButton(event));
+
+        category.setOnAction(event -> {
+            String selectedOption = category.getSelectionModel().getSelectedItem().toString();
+            switchScreen(selectedOption);
         });
-        btnCancel.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-                    thisstage.close();
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewUserPage.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load());
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }    
-    
+    }
+
+    private void handleNewGameButton(ActionEvent event) {
+        String selectedOption = category.getSelectionModel().getSelectedItem().toString();
+        switchScreen(selectedOption);
+    }
+
+    private void handleCancelButton(ActionEvent event) {
+        try {
+            Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+            thisstage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewUserPage.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void switchScreen(String selectedOption) {
+        switch (selectedOption) {
+            case "Musica":
+                handleMusicScreen();
+                break;
+            case "Cultura":
+                handleCultureScreen();
+                break;
+            case "Deportes":
+                handleDeportesScreen();
+                break;
+            case "Geografia":
+                handleGeografiaScreen();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void handleMusicScreen() {
+        try {
+            Stage thisstage = (Stage) btnNewGame.getScene().getWindow();
+            thisstage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewQuestionMusic.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void handleCultureScreen() {
+             try {
+            Stage thisstage = (Stage) btnNewGame.getScene().getWindow();
+            thisstage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewQuestionCulture.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void handleDeportesScreen() {
+            try {
+            Stage thisstage = (Stage) btnNewGame.getScene().getWindow();
+            thisstage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewQuestionSports.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void handleGeografiaScreen() {
+             try {
+            Stage thisstage = (Stage) btnNewGame.getScene().getWindow();
+            thisstage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewQuestionGeography.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
+

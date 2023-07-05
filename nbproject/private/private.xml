@@ -3,12 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Dell/Documents/Trabajos%20Poli%202023/Paradigmas%20de%20Programacion/EntregaFina/ArqTri/src/view/ViewQuestionCulture.fxml</file>
-            <file>file:/C:/Users/Dell/Documents/Trabajos%20Poli%202023/Paradigmas%20de%20Programacion/EntregaFina/ArqTri/src/controller/ViewNewGameController.java</file>
-            <file>file:/C:/Users/Dell/Documents/Trabajos%20Poli%202023/Paradigmas%20de%20Programacion/EntregaFina/ArqTri/src/controller/ViewQuestionsCultureController.java</file>
-            <file>file:/C:/Users/Dell/Documents/Trabajos%20Poli%202023/Paradigmas%20de%20Programacion/EntregaFina/ArqTri/src/controller/ViewQuestionsArtController.java</file>
-            <file>file:/C:/Users/Dell/Documents/Trabajos%20Poli%202023/Paradigmas%20de%20Programacion/EntregaFina/ArqTri/src/controller/ViewQuestionsSportsController.java</file>
-            <file>file:/C:/Users/Dell/Documents/Trabajos%20Poli%202023/Paradigmas%20de%20Programacion/EntregaFina/ArqTri/src/controller/ViewQuestionsGeographyController.java</file>
+            <file>file:/C:/Users/Dell/Documents/Trabajos%20Poli%202023/Paradigmas%20de%20Programacion/EntregaFina/ArqTri/src/controller/ViewGameOverControllerGeography.java</file>
+            <file>file:/C:/Users/Dell/Documents/Trabajos%20Poli%202023/Paradigmas%20de%20Programacion/EntregaFina/ArqTri/src/controller/ViewGameOverControllerSports.java</file>
+            <file>file:/C:/Users/Dell/Documents/Trabajos%20Poli%202023/Paradigmas%20de%20Programacion/EntregaFina/ArqTri/src/controller/ViewGameOverControllerCulture.java</file>
         </group>
     </open-files>
 </project-private>

@@ -21,7 +21,7 @@ import javafx.stage.Stage;
  *
  * @author Dell
  */
-public class ViewQuestionsArtController  implements Initializable {
+public class ViewQuestionsMusicController  implements Initializable {
 
     @FXML
     public Label question;
@@ -40,74 +40,74 @@ public class ViewQuestionsArtController  implements Initializable {
     private void loadQuestions() {
 
         if (counter == 0) { //Question 1
-            question.setText(" ¿Que novelas fueron escritas por el premio Nobel de Literatura Gabriel García Márquez ?");
-            opt1.setText("El otoño del Patriarca y El amor en los tiempos del cólera");
-            opt2.setText("Doña Bárbaray antaclaro");
-            opt3.setText("La muerte de Artemio Cruz y La región más transparente");
-            opt4.setText("Don Quijote de la mancha y La Gitanilla");
+            question.setText(" ¿De qué región es la salsa choke?");
+            opt1.setText("Region Caribe ");
+            opt2.setText("Region Pacifica");
+            opt3.setText("Region Insular");
+            opt4.setText("Region Andina");
         }
         if (counter == 1) { //Question 2
-            question.setText("2. ¿Cuándo ganó la selección colombiana la Copa América de Fútbol?");
-            opt1.setText("2007");
-            opt2.setText("2001");
-            opt3.setText("2011");
-            opt4.setText("2005");
+            question.setText("2.¿Cuál de ellos es considerado como uno de los más grandes compositores del vallenato?");
+            opt1.setText("Rafael Escalona");
+            opt2.setText("Maluma");
+            opt3.setText("Charrito Negro");
+            opt4.setText("Andres Cabas");
         }
         if (counter == 2) { //Question 3
-            question.setText("3. In the Solar System, farthest planet from the Sun is");
-            opt1.setText("Jupiter");
-            opt2.setText("Saturn");
-            opt3.setText("Uranus");
-            opt4.setText("Neptune");
+            question.setText("3. ¿De quién es la canción 'Aguacero de Mayo'?");
+            opt1.setText("Toto la Momposina");
+            opt2.setText("Pacho Galan");
+            opt3.setText("Lucho Vermudez");
+            opt4.setText("Esther Forero");
         }
         if (counter == 3) { //Question 4
-            question.setText("4. Largest moon in the Solar System?");
-            opt1.setText("Titan");
-            opt2.setText("Ganymede");
-            opt3.setText("Moon");
-            opt4.setText("Europa");
+            question.setText("4. ¿En qué ciudad se originó la champeta?");
+            opt1.setText("Santa Marta");
+            opt2.setText("Cali");
+            opt3.setText("Cartagena");
+            opt4.setText("Buenaventura");
         }
         if (counter == 4) {//Question 5
-            question.setText("5. Which of these is 'not' a property of metal?");
-            opt1.setText("Good Conduction");
-            opt2.setText("Malleable");
-            opt3.setText("Non Ductile");
-            opt4.setText("Sonourous");
+            question.setText("5. ¿Quién es el pionero de la carranga?");
+            opt1.setText("Jorge Velosa");
+            opt2.setText("Juan Ibarra");
+            opt3.setText("Galy Galeano");
+            opt4.setText("Rodolfo Aicardi");
         }
         if (counter == 5) { //Question 6
-            question.setText("6. Who discovered Pasteurisation?");
-            opt1.setText("Alexander Fleming");
-            opt2.setText("Louis Pasteur");
-            opt3.setText("Simon Pasteur");
-            opt4.setText("William Pasteur");
+            question.setText("6. ¿Qué grupo comenzó su carrera musical con el álbum 'La alegría de un pueblo'?");
+            opt1.setText("Dr Krapula");
+            opt2.setText("Grupo Niche");
+            opt3.setText("Binomio de Oro");
+            opt4.setText("Los 50 de Joselito");
         }
         if (counter == 6) { //Question 7
-            question.setText("7. Hydrochloric acid (HCl) is produced by -?");
-            opt1.setText("Small Intestine");
-            opt2.setText("Liver");
-            opt3.setText("Oesophagus");
-            opt4.setText("Stomach");
+            question.setText("7. ¿A qué género musical pertenece 'La pollera colorá'?");
+            opt1.setText("Cumbia");
+            opt2.setText("Ranchera");
+            opt3.setText("Salsa");
+            opt4.setText("Llanera");
         }
         if (counter == 7) { //Question 8
-            question.setText("8. The fastest animal in the world is -");
-            opt1.setText("Lion");
-            opt2.setText("Blackbuck");
-            opt3.setText("Cheetah");
-            opt4.setText("Quarter Horse");
+            question.setText("8. ¿Quién es La Ronca de Oro?");
+            opt1.setText("Paola Jara");
+            opt2.setText("Arelys Henao");
+            opt3.setText("Helenita Vargas");
+            opt4.setText("Fabiola Calle");
         }
         if (counter == 8) { //Question 9
-            question.setText("9. Complementary colour of Red is -");
-            opt1.setText("Blue");
-            opt2.setText("Green");
-            opt3.setText("Yellow");
-            opt4.setText("Pink");
+            question.setText("9. ¿cuál de estos géneros musicales pertenece a la región Andina?");
+            opt1.setText("Bambuco");
+            opt2.setText("Salsa");
+            opt3.setText("Bunde");
+            opt4.setText("Vallenato");
         }
         if (counter == 9) { //Question 10
-            question.setText("10. World Environment Day is on -");
-            opt1.setText("5th June");
-            opt2.setText("5th July");
-            opt3.setText("15th June");
-            opt4.setText("25th June");
+            question.setText("10. ¿Cuándo ocurre la historia que cuenta Joe Arroyo en su canción 'La rebelión'?");
+            opt1.setText("1700");
+            opt2.setText("1600");
+            opt3.setText("1500");
+            opt4.setText("1400");
         }
 
     }
@@ -126,7 +126,7 @@ public class ViewQuestionsArtController  implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverMusic.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);
@@ -144,70 +144,70 @@ public class ViewQuestionsArtController  implements Initializable {
     boolean checkAnswer(String answer) {
 
         if (counter == 0) {
-            if (answer.equals("El otoño del Patriarca y El amor en los tiempos del cólera")) {
+            if (answer.equals("Region Pacifica")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 1) {
-            if (answer.equals("Thomas Alva Edison")) {
+            if (answer.equals("Rafael Escalona")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 2) {
-            if (answer.equals("Neptune")) {
+            if (answer.equals("Toto la Momposina")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 3) {
-            if (answer.equals("Ganymede")) {
+            if (answer.equals("Cartagena")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 4) {
-            if (answer.equals("Non Ductile")) {
+            if (answer.equals("Jorge Velosa")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 5) {
-            if (answer.equals("Louis Pasteur")) {
+            if (answer.equals("Los 50 de Joselito")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 6) {
-            if (answer.equals("Stomach")) {
+            if (answer.equals("Cumbia")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 7) {
-            if (answer.equals("Cheetah")) {
+            if (answer.equals("Helenita Vargas")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 8) {
-            if (answer.equals("Green")) {
+            if (answer.equals("Bambuco")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 9) {
-            if (answer.equals("5th June")) {
+            if (answer.equals("1600")) {
                 return true;
             } else {
                 return false;
@@ -231,7 +231,7 @@ public class ViewQuestionsArtController  implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverMusic.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);
@@ -258,7 +258,7 @@ public class ViewQuestionsArtController  implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverMusic.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);
@@ -285,7 +285,7 @@ public class ViewQuestionsArtController  implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverMusic.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);

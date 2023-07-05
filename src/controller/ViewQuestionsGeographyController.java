@@ -40,74 +40,74 @@ public class ViewQuestionsGeographyController implements Initializable {
     private void loadQuestions() {
 
         if (counter == 0) { //Question 1
-            question.setText("  ");
-            opt1.setText("El otoño del Patriarca y El amor en los tiempos del cólera");
-            opt2.setText("Doña Bárbaray antaclaro");
-            opt3.setText("La muerte de Artemio Cruz y La región más transparente");
-            opt4.setText("Don Quijote de la mancha y La Gitanilla");
+            question.setText("¿Cómo se llama la cumbre más alta de Colombia?");
+            opt1.setText("Pico Cristóbal Colón");
+            opt2.setText("Nevado del Ruiz ");
+            opt3.setText("Sierra nevada de santamarta ");
+            opt4.setText("Nevado del Cocuy");
         }
         if (counter == 1) { //Question 2
-            question.setText("2.  ");
-            opt1.setText("2007");
-            opt2.setText("2001");
-            opt3.setText("2011");
-            opt4.setText("2005");
+            question.setText("2. ¿Cuántos parques nacionales existen en Colombia?  ");
+            opt1.setText("12");
+            opt2.setText("59");
+            opt3.setText("23");
+            opt4.setText("50");
         }
         if (counter == 2) { //Question 3
-            question.setText("3.  ");
-            opt1.setText("Jupiter");
-            opt2.setText("Saturn");
-            opt3.setText("Uranus");
-            opt4.setText("Neptune");
+            question.setText("3.  ¿Cuál es el lago más grande de Colombia?");
+            opt1.setText("Laguna Negra ");
+            opt2.setText("Lago de Tota");
+            opt3.setText("Lago Calima");
+            opt4.setText("El Embalse de Tominé");
         }
         if (counter == 3) { //Question 4
-            question.setText("4.  ");
-            opt1.setText("Titan");
-            opt2.setText("Ganymede");
-            opt3.setText("Moon");
-            opt4.setText("Europa");
+            question.setText("4.¿Cuál es el río más grande de Colombia?  ");
+            opt1.setText("Rio Sogamoso ");
+            opt2.setText("Rio Amazons");
+            opt3.setText("El Río Magdalena");
+            opt4.setText("Rio Cauca");
         }
         if (counter == 4) {//Question 5
-            question.setText("5.  ");
-            opt1.setText("Good Conduction");
-            opt2.setText("Malleable");
-            opt3.setText("Non Ductile");
-            opt4.setText("Sonourous");
+            question.setText("5. ¿Qué departamento de Colombia limita con Venezuela y Brasil? ");
+            opt1.setText("Amazonas");
+            opt2.setText("Guainía");
+            opt3.setText("Vichada");
+            opt4.setText("Chocó");
         }
         if (counter == 5) { //Question 6
-            question.setText("6.  ");
-            opt1.setText("Alexander Fleming");
-            opt2.setText("Louis Pasteur");
-            opt3.setText("Simon Pasteur");
-            opt4.setText("William Pasteur");
+            question.setText("6.  ¿Cuántos departamentos tiene Colombia?");
+            opt1.setText("32");
+            opt2.setText("44");
+            opt3.setText("23");
+            opt4.setText("30");
         }
         if (counter == 6) { //Question 7
-            question.setText("7.  ");
-            opt1.setText("Small Intestine");
-            opt2.setText("Liver");
-            opt3.setText("Oesophagus");
-            opt4.setText("Stomach");
+            question.setText("7. ¿Comó se llama el Sistema Montañoso que atraviesColombia de Norte a Sur? ");
+            opt1.setText("Sierra Nevada de Santa Marta");
+            opt2.setText("Cordillera de los Andes");
+            opt3.setText("Himalaya");
+            opt4.setText("Montañas Rocosas");
         }
         if (counter == 7) { //Question 8
-            question.setText("8.  ");
-            opt1.setText("Lion");
-            opt2.setText("Blackbuck");
-            opt3.setText("Cheetah");
-            opt4.setText("Quarter Horse");
+            question.setText("8. ¿Qué tan larga es la muralla de Cartagena de Indias? ");
+            opt1.setText("8 Km");
+            opt2.setText("15 Km");
+            opt3.setText("5 Km");
+            opt4.setText("20 Km");
         }
         if (counter == 8) { //Question 9
-            question.setText("9.  ");
-            opt1.setText("Blue");
-            opt2.setText("Green");
-            opt3.setText("Yellow");
-            opt4.setText("Pink");
+            question.setText("9. ¿Cuál es el departamento menos poblado del país? ");
+            opt1.setText("Amazonas");
+            opt2.setText("Guainia");
+            opt3.setText("Caqueta");
+            opt4.setText("Vaupes");
         }
         if (counter == 9) { //Question 10
-            question.setText("10.  -");
-            opt1.setText("5th June");
-            opt2.setText("5th July");
-            opt3.setText("15th June");
-            opt4.setText("25th June");
+            question.setText("10. ¿Cuál es el departamento más pequeño de Colombia?");
+            opt1.setText("Quindio");
+            opt2.setText("Risaralda");
+            opt3.setText("San Andres");
+            opt4.setText("Caldas");
         }
 
     }
@@ -126,7 +126,7 @@ public class ViewQuestionsGeographyController implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverGeography.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);
@@ -144,70 +144,70 @@ public class ViewQuestionsGeographyController implements Initializable {
     boolean checkAnswer(String answer) {
 
         if (counter == 0) {
-            if (answer.equals("El otoño del Patriarca y El amor en los tiempos del cólera")) {
+            if (answer.equals("Pico Cristóbal Colón")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 1) {
-            if (answer.equals("Thomas Alva Edison")) {
+            if (answer.equals("59")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 2) {
-            if (answer.equals("Neptune")) {
+            if (answer.equals("Lago de Tota")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 3) {
-            if (answer.equals("Ganymede")) {
+            if (answer.equals("El Río Magdalena")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 4) {
-            if (answer.equals("Non Ductile")) {
+            if (answer.equals("Guainía")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 5) {
-            if (answer.equals("Louis Pasteur")) {
+            if (answer.equals("32")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 6) {
-            if (answer.equals("Stomach")) {
+            if (answer.equals("Cordillera de los Andes")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 7) {
-            if (answer.equals("Cheetah")) {
+            if (answer.equals("8 Km")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 8) {
-            if (answer.equals("Green")) {
+            if (answer.equals("Vaupes")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 9) {
-            if (answer.equals("5th June")) {
+            if (answer.equals("Quindio")) {
                 return true;
             } else {
                 return false;
@@ -231,7 +231,7 @@ public class ViewQuestionsGeographyController implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverGeography.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);
@@ -258,7 +258,7 @@ public class ViewQuestionsGeographyController implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverGeography.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);
@@ -285,7 +285,7 @@ public class ViewQuestionsGeographyController implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverGeography.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);

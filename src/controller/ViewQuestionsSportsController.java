@@ -40,74 +40,74 @@ public class ViewQuestionsSportsController  implements Initializable {
     private void loadQuestions() {
 
         if (counter == 0) { //Question 1
-            question.setText(" Q1");
-            opt1.setText("El otoño del Patriarca y El amor en los tiempos del cólera");
-            opt2.setText("Doña Bárbaray antaclaro");
-            opt3.setText("La muerte de Artemio Cruz y La región más transparente");
-            opt4.setText("Don Quijote de la mancha y La Gitanilla");
+            question.setText("1. ¿Cuál es el deporte qué más campeonatos mundiales le ha dado a Colombia?");
+            opt1.setText("Futbol");
+            opt2.setText("Tennis");
+            opt3.setText("Boxeo");
+            opt4.setText("Baseball");
         }
         if (counter == 1) { //Question 2
-            question.setText("2. Q2");
-            opt1.setText("2007");
-            opt2.setText("2001");
-            opt3.setText("2011");
-            opt4.setText("2005");
+            question.setText("2. ¿Cual es el Maximo anotador de la Seleccion Colombia?");
+            opt1.setText("Falcao Garcia");
+            opt2.setText("Pibe Balderrama");
+            opt3.setText("Faustino Asprilla");
+            opt4.setText("James Rodriguez");
         }
         if (counter == 2) { //Question 3
-            question.setText("3.  ");
-            opt1.setText("Jupiter");
-            opt2.setText("Saturn");
-            opt3.setText("Uranus");
-            opt4.setText("Neptune");
+            question.setText("3.¿En que año se Realizo La primera edición de la vuelta a Colobia?");
+            opt1.setText("1965");
+            opt2.setText("1890");
+            opt3.setText("1980");
+            opt4.setText("1951");
         }
         if (counter == 3) { //Question 4
-            question.setText("4.  ");
-            opt1.setText("Titan");
-            opt2.setText("Ganymede");
-            opt3.setText("Moon");
-            opt4.setText("Europa");
+            question.setText("4. ¿Cuántas veces ha ganado la selección colombiana de fútbol la Copa América?");
+            opt1.setText("Nunca ha ganado la Copa América");
+            opt2.setText("1 vez");
+            opt3.setText("2 veces");
+            opt4.setText(" 3 veces");
         }
         if (counter == 4) {//Question 5
-            question.setText("5.  ");
-            opt1.setText("Good Conduction");
-            opt2.setText("Malleable");
-            opt3.setText("Non Ductile");
-            opt4.setText("Sonourous");
+            question.setText("5. ¿Cuál es el deporte más popular en Colombia?");
+            opt1.setText("Tenis");
+            opt2.setText("Béisbol");
+            opt3.setText("Ciclismo");
+            opt4.setText("Fútbol");
         }
         if (counter == 5) { //Question 6
-            question.setText("6.  ");
-            opt1.setText("Alexander Fleming");
-            opt2.setText("Louis Pasteur");
-            opt3.setText("Simon Pasteur");
-            opt4.setText("William Pasteur");
+            question.setText("6. ¿Cuál es el equipo más exitoso en la historia del fútbol colombiano? ");
+            opt1.setText("Millonarios");
+            opt2.setText("Atlético Nacional");
+            opt3.setText("América de Cali");
+            opt4.setText("Independiente Santa Fe");
         }
         if (counter == 6) { //Question 7
-            question.setText("7.  ");
-            opt1.setText("Small Intestine");
-            opt2.setText("Liver");
-            opt3.setText("Oesophagus");
-            opt4.setText("Stomach");
+            question.setText("7. ¿Quién es el ciclista colombiano que ha ganado el Tour de Francia?");
+            opt1.setText("Nairo Quintana");
+            opt2.setText("Rigoberto Urán");
+            opt3.setText("Egan Bernal");
+            opt4.setText("Sergio Higuita");
         }
         if (counter == 7) { //Question 8
-            question.setText("8.  ");
-            opt1.setText("Lion");
-            opt2.setText("Blackbuck");
-            opt3.setText("Cheetah");
-            opt4.setText("Quarter Horse");
+            question.setText("8. ¿Cuál es el boxeador colombiano que ha logrado ganar varios títulos mundiales en diferentes categorías?");
+            opt1.setText(" Antonio Cervantes 'Kid Pambelé'");
+            opt2.setText(" Miguel 'Happy' Lora");
+            opt3.setText("Rodrigo Valdéz");
+            opt4.setText("Édgar Rentería");
         }
         if (counter == 8) { //Question 9
-            question.setText("9.  ");
-            opt1.setText("Blue");
-            opt2.setText("Green");
-            opt3.setText("Yellow");
-            opt4.setText("Pink");
+            question.setText("9. ¿Cuál es el patinador colombiano más exitoso en la historia de los campeonatos mundiales de patinaje?");
+            opt1.setText("Fabriana Arias");
+            opt2.setText("Pedro Causil");
+            opt3.setText("Jorge Botero");
+            opt4.setText("Cecilia Baena");
         }
         if (counter == 9) { //Question 10
-            question.setText("10.  ");
-            opt1.setText("5th June");
-            opt2.setText("5th July");
-            opt3.setText("15th June");
-            opt4.setText("25th June");
+            question.setText("10. ¿En qué disciplina del patinaje Colombia ha tenido más éxito a nivel internacional?");
+            opt1.setText("Patinaje freestyle");
+            opt2.setText("Patinaje de carreras en línea");
+            opt3.setText("Patinaje artístico");
+            opt4.setText("Patinaje de velocidad");
         }
 
     }
@@ -126,7 +126,7 @@ public class ViewQuestionsSportsController  implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverSports.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);
@@ -144,70 +144,70 @@ public class ViewQuestionsSportsController  implements Initializable {
     boolean checkAnswer(String answer) {
 
         if (counter == 0) {
-            if (answer.equals("El otoño del Patriarca y El amor en los tiempos del cólera")) {
+            if (answer.equals("Boxeo")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 1) {
-            if (answer.equals("Thomas Alva Edison")) {
+            if (answer.equals("Falcao Garcia")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 2) {
-            if (answer.equals("Neptune")) {
+            if (answer.equals("1951")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 3) {
-            if (answer.equals("Ganymede")) {
+            if (answer.equals("1 vez")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 4) {
-            if (answer.equals("Non Ductile")) {
+            if (answer.equals("Fútbol")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 5) {
-            if (answer.equals("Louis Pasteur")) {
+            if (answer.equals("Atlético Nacional")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 6) {
-            if (answer.equals("Stomach")) {
+            if (answer.equals("Egan Bernal")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 7) {
-            if (answer.equals("Cheetah")) {
+            if (answer.equals(" Antonio Cervantes 'Kid Pambelé'")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 8) {
-            if (answer.equals("Green")) {
+            if (answer.equals("Jorge Botero")) {
                 return true;
             } else {
                 return false;
             }
         }
         if (counter == 9) {
-            if (answer.equals("5th June")) {
+            if (answer.equals("Patinaje de velocidad")) {
                 return true;
             } else {
                 return false;
@@ -231,7 +231,7 @@ public class ViewQuestionsSportsController  implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverSports.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);
@@ -258,7 +258,7 @@ public class ViewQuestionsSportsController  implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverSports.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);
@@ -285,7 +285,7 @@ public class ViewQuestionsSportsController  implements Initializable {
                 System.out.println(correct);
                 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 thisstage.close();
-                FXMLLoader quiz = new FXMLLoader(getClass().getResource("result.fxml"));
+                FXMLLoader quiz = new FXMLLoader(getClass().getResource("/view/ViewGameOverSports.fxml"));
                 Scene quizscene = new Scene(quiz.load());
                 Stage quizstage = new Stage();
                 quizstage.setScene(quizscene);

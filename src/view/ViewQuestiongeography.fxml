@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="740.0" style="-fx-background-color: #D6F0E2; -fx-min-width: 809; -fx-min-height: 425;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewQuestionsController">
+<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="740.0" style="-fx-background-color: #D6F0E2; -fx-min-width: 809; -fx-min-height: 425;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewQuestionsGeographyController">
    <children>
       <AnchorPane minWidth="809.0" prefHeight="92.0" prefWidth="740.0" style="-fx-background-color: #D9D9D9; -fx-min-width: 809; -fx-min-height: 93;">
          <children>
@@ -29,16 +29,15 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Label layoutX="38.0" layoutY="64.0" prefHeight="18.0" prefWidth="164.0" text="CATEGORIA: Cultura General" />
-            <Label fx:id="question" layoutX="18.0" layoutY="90.0" prefHeight="63.0" prefWidth="314.0" text="¿Cuál es el animal más grande de la Tierra?">
+            <Label fx:id="question" layoutX="14.0" layoutY="44.0" prefHeight="102.0" prefWidth="343.0" text="¿Cuál es el animal más grande de la Tierra?" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button id="opt1" fx:id="opt1" onAction="#opt1clicked" layoutX="130.0" layoutY="294.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="119.0" style="-fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-radius: 10px;" text="Rinoceronte" />
-            <Button id="opt2" fx:id="opt2" onAction="#opt2clicked" layoutX="128.0" layoutY="247.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="119.0" style="-fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-radius: 10px;" text="Calamar Gigante " />
-            <Button id="opt3" fx:id="opt3" onAction="#opt3clicked" layoutX="129.0" layoutY="197.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="119.0" style="-fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-radius: 10px;" text="Ballena Azul" />
-            <Button id="opt4" fx:id="opt4" onAction="#opt4clicked" layoutX="127.0" layoutY="153.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="119.0" style="-fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-radius: 10px;" text="Elefante" />
+            <Button id="opt1" fx:id="opt1" layoutX="38.0" layoutY="293.0" mnemonicParsing="false" onAction="#opt1clicked" prefHeight="27.0" prefWidth="294.0" style="-fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-radius: 10px;" text="Rinoceronte" />
+            <Button id="opt2" fx:id="opt2" layoutX="38.0" layoutY="247.0" mnemonicParsing="false" onAction="#opt2clicked" prefHeight="27.0" prefWidth="294.0" style="-fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-radius: 10px;" text="Calamar Gigante " />
+            <Button id="opt3" fx:id="opt3" layoutX="38.0" layoutY="198.0" mnemonicParsing="false" onAction="#opt3clicked" prefHeight="27.0" prefWidth="294.0" style="-fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-radius: 10px;" text="Ballena Azul" />
+            <Button id="opt4" fx:id="opt4" layoutX="38.0" layoutY="152.0" mnemonicParsing="false" onAction="#opt4clicked" prefHeight="27.0" prefWidth="294.0" style="-fx-background-color: #ffff; -fx-border-color: #000000; -fx-border-radius: 10px;" text="Elefante" />
          </children>
       </AnchorPane>
    </children>
