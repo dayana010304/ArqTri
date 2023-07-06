@@ -86,7 +86,7 @@ public class ViewLoginController implements Initializable {
 
                         JOptionPane.showMessageDialog(null, "Datos correctos puede ingresar al sistema");
                         
-                        loadStage("/view/ViewPrincipal.fxml", event);
+                        loadStage("/view/ViewUserPage.fxml", event);
 
                     }else{
                         JOptionPane.showMessageDialog(null, "Error al iniciar sesión datos de acceso incorrectos", 
@@ -112,22 +112,7 @@ public class ViewLoginController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-      btnLogin.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-                    thisstage.close();
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewUserPage.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load());
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+        // TODO
     }    
     
     private void loadStage(String url, Event event){

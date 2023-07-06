@@ -31,7 +31,7 @@
             <Label layoutX="65.0" layoutY="250.0" text="Nombre de usuario" />
             <TextField fx:id="txtNameUser" layoutX="66.0" layoutY="267.0" style="-fx-min-width: 227; -fx-min-height: 28;" />
             <CheckBox layoutX="67.0" layoutY="308.0" mnemonicParsing="false" text="Acepto los términos y condiciones" />
-            <Button fx:id="btnRegister" layoutX="66.0" layoutY="345.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="220.0" style="-fx-background-color: #273F92; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="CREAR CUENTA" textFill="WHITE" />
+            <Button fx:id="btnRegister" onAction="#eventAction" layoutX="66.0" layoutY="345.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="220.0" style="-fx-background-color: #273F92; -fx-font-family: ARIAL; -fx-font-weight: bolder;" text="CREAR CUENTA" textFill="WHITE" />
             <Label layoutX="168.0" layoutY="383.0" text="¿Ya tienes cuenta? Inicia sesión" textFill="#126ad2" />
          </children>
       </AnchorPane>
